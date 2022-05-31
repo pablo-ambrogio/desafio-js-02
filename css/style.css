@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background: #ff7a7a url(../images/bg-intro-desktop.png) no-repeat center/cover;
+}
+@media screen and (max-width: 43.74em) {
+  .main {
+    height: auto;
+    background: #ff7a7a url(../images/bg-intro-mobile.png) no-repeat center/cover;
+    padding: 1rem 0 3rem;
+  }
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 43.74em) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+    row-gap: 3rem;
+    max-width: 450px;
+  }
+}
+.container__texts {
+  width: 100%;
+  height: auto;
+}
+.container__forms {
+  width: 100%;
+  height: auto;
+}
+.container__free {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  background: #6055a5;
+  padding: 1rem 0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 43.74em) {
+  .container__free {
+    width: 100%;
+    padding: 1rem 3rem;
+    box-sizing: border-box;
+  }
+}
+
+.text__title {
+  font-size: 3em;
+  color: #fff;
+}
+@media screen and (max-width: 43.74em) {
+  .text__title {
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+.text__paragraph {
+  color: #fff;
+  line-height: 1.5em;
+}
+@media screen and (max-width: 43.74em) {
+  .text__paragraph {
+    text-align: center;
+    line-height: 2em;
+  }
+}
+.text__paragraph--mod {
+  margin: 0;
+  font-weight: lighter;
+}
+.text__paragraph--bold {
+  font-weight: 600;
+}
+
+.form {
+  width: 90%;
+  height: auto;
+  background: #fff;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 43.74em) {
+  .form {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+}
+.form__input {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 1rem 0 1rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #b9b6d3;
+  font-weight: 500;
+}
+.form__input--okay {
+  border: 2px solid #38cc8c;
+  background: url(../images/check.svg) no-repeat 98%;
+}
+.form__input--wrong {
+  border: 2px solid #ff7a7a;
+  background: url(../images/cancel.svg) no-repeat 98%;
+}
+.form__input::placeholder {
+  font-size: 0.9em;
+}
+.form__input--button {
+  background: #38cc8c;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border: none;
+}
+@media screen and (max-width: 43.74em) {
+  .form__input--button {
+    letter-spacing: 0;
+  }
+}
+.form__you-accept {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #b9b6d3;
+}
+.form__you-accept--terms {
+  color: #ff7a7a;
+  cursor: pointer;
+}
+.form__message {
+  width: 100%;
+  height: auto;
+  text-align: right;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  visibility: hidden;
+  font-size: 0.9em;
+  color: #3e3c49;
+}
+
+#form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

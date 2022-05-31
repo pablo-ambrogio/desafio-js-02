@@ -1,0 +1,173 @@
+@use './components/mixin' as mx;
+@use './components/breakpoints' as bp;
+@use './utils/colors' as cl;
+@use './utils/typography' as tp;
+
+.main {
+    @include mx.w-h( 100%, 100vh );
+    // max-width: 1440px;
+    margin: auto;
+    background: cl.$color-red url(../images/bg-intro-desktop.png) no-repeat center / cover;
+
+    @include bp.breakpoint( ms ) {
+        height: auto;
+        background: cl.$color-red url(../images/bg-intro-mobile.png) no-repeat center / cover;
+        padding: 1rem 0 3rem;
+    }
+}
+
+.container {
+    @include mx.w-h( 80%, 100% );
+    margin: auto;
+    max-width: 1300px;
+    @include mx.d-flex( row, center, center );
+    // column-gap: 2rem;
+
+    @include bp.breakpoint( ms ) {
+        width: 90%;
+        flex-direction: column;
+        row-gap: 3rem;
+        max-width: 450px;
+    }
+
+    // * Etiqueta <div> lado izquierdo
+    &__texts {
+        @include mx.w-h( 100%, auto );
+
+        // background-color: mediumseagreen;
+    }
+
+    // * Etiqueta <div> lado derecho
+    &__forms {
+        @include mx.w-h( 100%, auto );
+        // background-color: mediumslateblue;
+    }
+
+    // * Etiqueta <div> contenedor text form
+    &__free {
+        @include mx.w-h( 90%, auto );
+        margin: auto;
+        text-align: center;
+        background: cl.$color-blue;
+        padding: 1rem 0;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+
+        @include bp.breakpoint( ms ) {
+            width: 100%;
+            padding: 1rem 3rem;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.text__title {
+    font-size: 3em;
+    color: #fff;
+
+    @include bp.breakpoint( ms ) {
+        font-size: 2em;
+        text-align: center;
+    }
+}
+
+.text__paragraph {
+    color: #fff;
+    line-height: 1.5em;
+    
+    @include bp.breakpoint( ms ) {
+        text-align: center;
+        line-height: 2em;
+    }
+
+    &--mod {
+        margin: 0;
+        font-weight: lighter;
+    }
+
+    &--bold {
+        font-weight: 600;
+    }
+}
+
+.form {
+    @include mx.w-h( 90%, auto );
+    background: #fff;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @include bp.breakpoint( ms ) {
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
+
+    &__input {
+        @include mx.w-h( 100%, auto );
+        box-sizing: border-box;
+        padding: 1rem 0 1rem 1rem;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid cl.$color-grayish-blue;
+        font-weight: 500;
+
+        &--okay {
+            border: 2px solid cl.$color-green;
+            background: url(../images/check.svg) no-repeat 98%;
+        }
+        
+        &--wrong {
+            border: 2px solid cl.$color-red;
+            background: url(../images/cancel.svg) no-repeat 98%;
+        }
+
+        &::placeholder {
+            font-size: .9em;
+        }
+
+        &--button {
+            background: cl.$color-green;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-top: .5rem;
+            border: none;
+
+            @include bp.breakpoint( ms ) {
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    &__you-accept {
+        @include mx.w-h( 100%, auto );
+        text-align: center;
+        font-size: .7rem;
+        color: cl.$color-grayish-blue;
+
+        &--terms {
+            color: cl.$color-red;
+            cursor: pointer;
+        }
+    }
+
+    &__message {
+        @include mx.w-h( 100%, auto );
+        text-align: right;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        visibility: hidden;
+        font-size: .9em;
+        color: cl.$color-dark-blue;
+    }
+}
+
+#form {
+    @include mx.w-h( 100%, auto );
+    @include mx.d-flex( column, flex-start, flex-start );
+    row-gap: .5rem;
+    margin: auto;
+}
